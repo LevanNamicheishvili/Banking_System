@@ -14,3 +14,5 @@ struct  Account
 
 struct  Account* createAccount(const char* accountNumber, const char* holderName);
 void deposit (struct Account* account, double amount );
+void withdraw(struct Account* account, double amount);
+void displayAccount(const struct Account* account);
