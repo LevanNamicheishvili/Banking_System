@@ -3,14 +3,14 @@ This is a console-based banking system implemented in C. The project allows user
 
 # Features 
 
-1.  # Account Creation: Users can create new accounts by providing an account number and account holder name. The system supports storing multiple accounts, allowing multiple users to use the banking system.
-2.  # Login: Users can log in using their account number to access their account. The system verifies the provided account number to ensure secure access.
-3.  # Deposit and Withdraw: Logged-in users can deposit and withdraw funds from their account. The system ensures proper validation to prevent invalid transactions. Users can safely manage their funds using these operations.
-4.  # Account Details: Users can view their account details, including account number, account holder name, and account balance. This feature provides transparency and allows users to keep track of their account status.
-5.  # Error Handling: The system is equipped with proper error handling to provide helpful messages and guide users in case of invalid inputs or other issues. This ensures a smooth and user-friendly experience.
-6.  # Dynamic Memory Allocation: The system uses dynamic memory allocation for account creation, allowing the program to manage and store multiple accounts effectively.
-7.  # Modular Code Design: The code is organized into functions and separated logically, promoting modularity and readability. This design allows for easy maintenance and extension of the system.
-8.  # Graceful Termination: The program ensures proper memory cleanup and exits gracefully when the user chooses to exit, preventing memory leaks.
+1.   Account Creation: Users can create new accounts by providing an account number and account holder name. The system supports storing multiple accounts, allowing multiple users to use the banking system.
+2.   Login: Users can log in using their account number to access their account. The system verifies the provided account number to ensure secure access.
+3.   Deposit and Withdraw: Logged-in users can deposit and withdraw funds from their account. The system ensures proper validation to prevent invalid transactions. Users can safely manage their funds using these operations.
+4.   Account Details: Users can view their account details, including account number, account holder name, and account balance. This feature provides transparency and allows users to keep track of their account status.
+5.   Error Handling: The system is equipped with proper error handling to provide helpful messages and guide users in case of invalid inputs or other issues. This ensures a smooth and user-friendly experience.
+6.   Dynamic Memory Allocation: The system uses dynamic memory allocation for account creation, allowing the program to manage and store multiple accounts effectively.
+7.   Modular Code Design: The code is organized into functions and separated logically, promoting modularity and readability. This design allows for easy maintenance and extension of the system.
+8.   Graceful Termination: The program ensures proper memory cleanup and exits gracefully when the user chooses to exit, preventing memory leaks.
 
 # How to Use
 1. Clone the repository or download the source code files.
