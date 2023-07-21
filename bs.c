@@ -16,7 +16,6 @@ struct  Account* createAccount(const char* accountNumber, const char* holderName
 void deposit (struct Account* account, double amount );
 void withdraw(struct Account* account, double amount);
 void displayAccount(const struct Account* account);
-<<<<<<< HEAD
 
 int main()
 { 
@@ -45,9 +44,20 @@ int main()
 
                 printf("Enter account holder number: "); 
                 getchar();
+                fgets(holderName, sizeof(holderName), stdin);
+                holderName[strcspn(holderName, "\n")] = '\0';
+
+                struct Account* newAccount = createAccount(accountNumber, holderName);
+                if (newAccount) {
+                    accounts = (struct Account**)realloc(accounts, (numAccounts + 1) * sizeof(struct Account*));
+                    accounts[numAccounts] = newAccount;
+                    numAccounts++;
+                    printf("Account created successfully!\n");
+                } else {
+                    printf("Error: Maximum number of accounts reached.\n");
+                }
+                break;
             }
         }
     }
 }
-=======
->>>>>>> 9f2b00a07171a43c5a06491e608c02e05b2138b6
