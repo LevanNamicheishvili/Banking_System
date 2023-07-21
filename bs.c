@@ -16,6 +16,7 @@ struct  Account* createAccount(const char* accountNumber, const char* holderName
 void deposit (struct Account* account, double amount );
 void withdraw(struct Account* account, double amount);
 void displayAccount(const struct Account* account);
+<<<<<<< HEAD
 
 int main()
 { 
@@ -48,3 +49,5 @@ int main()
         }
     }
 }
+=======
+>>>>>>> 9f2b00a07171a43c5a06491e608c02e05b2138b6
