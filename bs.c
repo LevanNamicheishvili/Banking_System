@@ -32,17 +32,15 @@ int main()
         char option; 
         scanf("%c, &option");
 
-        switch(option)
-        {
-            case '1' : 
-            { 
+          switch (option) {
+            case '1': {
                 char accountNumber[20];
                 char holderName[MAX_NAME_LENGTH];
 
-                printf("Enter account number : ");
+                printf("Enter account number: ");
                 scanf("%s", accountNumber);
 
-                printf("Enter account holder number: "); 
+                printf("Enter account holder name: ");
                 getchar();
                 fgets(holderName, sizeof(holderName), stdin);
                 holderName[strcspn(holderName, "\n")] = '\0';
@@ -58,6 +56,38 @@ int main()
                 }
                 break;
             }
+            case '2': {
+                char accountNumber[20];
+                printf("Enter account number: ");
+                scanf("%s", accountNumber);
+
+                struct Account* foundAccount = NULL;
+                for (int i = 0; i < numAccounts; i++) {
+                    if (strcmp(accountNumber, accounts[i]->accountNumber) == 0) {
+                        foundAccount = accounts[i];
+                        break;
+                    }
+                }
+
+                if (foundAccount) {
+                    printf("Login successful!\n");
+                    loggedInMenu(foundAccount);
+                } else {
+                    printf("Invalid account number. Login failed.\n");
+                }
+                break;
+            }
+            case '3':
+                printf("Exiting...\n");
+                for (int i = 0; i < numAccounts; i++) {
+                    free(accounts[i]);
+                }
+                free(accounts);
+                return 0;
+            default:
+                printf("Invalid choice. Please try again.\n");
         }
     }
+
+    return 0;
 }
