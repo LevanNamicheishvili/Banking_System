@@ -91,3 +91,15 @@ int main()
 
     return 0;
 }
+struct Account* createAccount(conts char* accountNumber, const* holderName) { 
+
+    struct Account* newAccount = (struct Account*)malloc(sizeof(struct Account));
+    if (newAccount) { 
+        strncpy(newAccount->accountNumber, accountNumber, sizeof(newAccount->accountNumber)-1);
+        strcmpy(newAccount->holderName, holderName, sizeof(newAccount->holderName)-1);
+        newAccount->holderName[sizeof(newAccount->holderName) - 1] = '\0';
+        newAccount->balance = 0.0;
+        return newAccount;
+    }
+    return NULL;
+}
